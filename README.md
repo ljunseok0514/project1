@@ -76,8 +76,53 @@
 ### 메인 페이지
 
 #### Header
+```dom
+header.header
+└── div.header__group
+    └── div.header__group__tab
+        └── h1.group__logo
+            └── img.group__logo_img
+        └── ul.group__itemBox
+            └── li.grop__itemBox__item
+                └── a.itemBox__link[href="/"] (마켓칼리)
+            └── li.grop__itemBox__item
+                └── span.itemBox__item__divider[aria-hidden="true"] (ㅣ)
+                └── a.itemBox__link[href="/"] (뷰티칼리)
+    └── form.header__group__searchForm[action="/"][method="POST"]
+        └── fieldset.group__searchForm__fieldset
+            └── legend.a11yHidden (검색 폼)
+            └── div.searchForm__group
+                └── div.searchForm__group__formInputBox
+                    └── label.a11yHidden[for="search"] (검색어)
+                    └── input.group__input[type="search"][id="search"][name="search"][required][placeholder="검색어를 입력하세요."]
+                └── button.searchForm__group__button[type="submit"]
+    └── ul.header__group__myPage
+        └── li.group__myPageLi
+            └── button.group__myPageLi__button[type="button"][aria-label="배송지 등록"]
+        └── li.gorup__myPageLi
+            └── button.group__myPageLi__button[type="button"][aria-label="찜하기"]
+        └── li.gorup__myPageLi
+            └── button.group__myPageLi__button[type="button"][aria-label="장바구니"]
+    └── ul.header__group__memberOnly
+        └── li.group__memberOnlyLi
+            └── a[href="/"] (회원가입)
+        └── li.group__memberOnlyLi
+            └── span.group__memberOnlyLi__divider[aria-hidden="true"] (ㅣ)
+            └── a[href="/"] (로그인)
+        └── li.group__memberOnlyLi
+            └── span.group__memberOnlyLi__divider[aria-hidden="true"] (ㅣ)
+            └── a[href="/"] (고객센터)
+
+```
 
 - 마크업
+
+
+1. 작업하면서 태그 마다 클래스 속성을 다 써본적 없는데 처음으로 다 클래스를 부여했다<br>
+2. 스크린리더가 읽기, 읽기않기 위한 태그, 속성사용 ex) label,aria-label, aria-hidden <br>
+3. 회원가입, 로그인, 고객센터 부분이 시각적으로 제일 상단에 위치해서 태그위치도 상단에 있었으나 중요도로는 우선순위가 떨어지기에 제일 하단으로 옮김<br>
+4. 검색창 부분을 시멘틱한 구조로 짜기 위해 form, fieldset, label 태그 사용
+
 - CSS
 
 #### Nav
