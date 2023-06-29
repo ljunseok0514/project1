@@ -1625,6 +1625,7 @@ legend {
   grid-template-rows: auto;
   grid-column-gap: 0.5rem;
   grid-row-gap: 0;
+  cursor: pointer;
 }
 
 .button__cancle, .button__addCart {
@@ -1638,7 +1639,7 @@ legend {
   height: 3.375rem;
   border-radius: 0.1875rem;
 }
-.button__cancle {
+.button__cancel {
   border: 1px solid #898989;
   font-size: 16px;
   font-weight: 600;
